@@ -25,7 +25,7 @@ class NumberDivider {
   }
 }
 
-(function start() {
+(function() {
 	let number = new NumberDivider(parseInt(prompt(`Введите цыфру из промежутка от 10 до 99.`)));
 	console.log(number.separate());
 })();
