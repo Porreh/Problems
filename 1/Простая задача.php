@@ -10,3 +10,22 @@
 //  Ввод: 23
 //  Вывод: 2 3
 //  ====================================================================================================
+
+<?php
+	class NumberDivider {
+	  	function separate($number) {
+	  		if($number > 9 && $number < 100) {
+	  			$number = str_split($number);
+	  			return $number[0]." ".$number[1];
+	  		} else {
+	  			echo "Нужно ввести цыфру из промежутка от 10 до 99.";
+	  		}
+	  	}
+	}
+	(function() {
+		//echo "Введите цыфру из промежутка от 10 до 99.";
+		$line = fgets(STDIN);
+		$number = new NumberDivider();
+		echo $number->separate($line);
+	})();
+?>
