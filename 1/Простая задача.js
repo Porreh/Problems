@@ -16,16 +16,15 @@ class NumberDivider {
     this.number = number;
   }
   separate() {
-		if(this.number > 9 && this.number < 100) {
-			let number = this.number.toString().split("");
-			return `${number[0]} ${number[1]}`;
-		} else {
-			console.log(`Цыфра ${this.number} не подходит. Нужно ввести цыфру из промежутка от 10 до 99.`);
-		}
+    if(this.number > 9 && this.number < 100) {
+      let number = this.number.toString().split("");
+      return `${number[0]} ${number[1]}`;
+    } else {
+      console.log(`Цыфра ${this.number} не подходит. Нужно ввести цыфру из промежутка от 10 до 99.`);
+    }
   }
 }
-
 (function() {
-	let number = new NumberDivider(parseInt(prompt(`Введите цыфру из промежутка от 10 до 99.`)));
-	console.log(number.separate());
+  let number = new NumberDivider(parseInt(prompt(`Введите цыфру из промежутка от 10 до 99.`)));
+  console.log(number.separate());
 })();
