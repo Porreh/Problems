@@ -16,16 +16,16 @@ class NumberLength {
     this.number = number;
   }
   len() {
-  	if(this.number >= 0 && this.number <= 2 * Math.pow(10 ,9)) {
-		let number = this.number.toString().split("");
-		return number.length;
-	} else {
-		console.log(`Число ${this.number} не подходит. Нужно ввести целое неотрицательное число.`);
-	}
+    if(this.number >= 0 && this.number <= 2 * Math.pow(10 ,9)) {
+      let number = this.number.toString().split("");
+      return number.length;
+    } else {
+      console.log(`Число ${this.number} не подходит. Нужно ввести целое неотрицательное число.`);
+    }
   }
 }
 
 (function() {
-	let number = new NumberLength(parseInt(prompt(`Введите целое неотрицательное число.`)));
-	console.log(number.len());
+  let number = new NumberLength(parseInt(prompt(`Введите целое неотрицательное число.`)));
+  console.log(number.len());
 })();
