@@ -21,17 +21,17 @@
 let floor = prompt(`What floor do you want to go?`);
 	
 function elevator(inst) {
-	let floor = 0;
-	inst.split("").forEach(
-		function(item) {
-		  if (item == "(") {
-		  	floor++;
-		  } else {
-		  	floor--;
-		  }	
-		}
-	);
-	return floor;
+  let floor = 0;
+  inst.split("").forEach(
+    function(item) {
+      if (item == "(") {
+        floor++;
+      } else {
+        floor--;
+      }	
+    }
+  );
+  return floor;
 }
 
 console.log(elevator(floor));
